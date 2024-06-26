@@ -67,8 +67,8 @@ class SolicitudesController {
         return $response;
     }
 
-    private function getSolicitudesByCliente($idCliente) {
-        $this->solicitud->idCliente = $idCliente;
+    private function getSolicitudesByCliente($id_usuario) {
+        $this->solicitud->id_usuario = $id_usuario;
         $result = $this->solicitud->getSolicitudesByCliente();
         if ($result->rowCount() > 0) {
             $response['status_code_header'] = 'HTTP/1.1 200 OK';
