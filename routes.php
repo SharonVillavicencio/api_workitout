@@ -37,7 +37,7 @@ if (isset($_GET['controller'])) {
         $servicioId = isset($_GET['idServicio']) ? $_GET['idServicio'] : null;
         $categoriaId = isset($_GET['idCategoria']) ? $_GET['idCategoria'] : null;
         $controller = new ServiciosController($db, $requestMethod, $servicioId, $categoriaId);
-        $controller->processRequest();
+        $controller->processRequest(); 
     } elseif ($_GET['controller'] === 'solicitudes') {
         $solicitudId = isset($_GET['idSolicitud']) ? $_GET['idSolicitud'] : null;
         $clienteId = isset($_GET['idCliente']) ? $_GET['idCliente'] : null;

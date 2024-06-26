@@ -13,7 +13,7 @@ class Queja {
 
     public function __construct($db) {
         $this->conn = $db;
-    }
+    } 
 
     public function createQueja() {
         $query = "INSERT INTO " . $this->table . " (idCliente, idSolicitud, motivo, descripcion, imagen, fechaHoraRegistro) VALUES (:idCliente, :idSolicitud, :motivo, :descripcion, :imagen, NOW())";

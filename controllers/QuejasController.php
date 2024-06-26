@@ -45,7 +45,7 @@ class QuejasController {
         $this->queja->motivo = $input['motivo'];
         $this->queja->descripcion = $input['descripcion'];
         $this->queja->imagen = $input['imagen'];
-
+ 
         if ($this->queja->createQueja()) {
             $response['status_code_header'] = 'HTTP/1.1 201 Created';
             $response['body'] = json_encode(['mensaje' => 'Queja registrada correctamente', 'estado' => 1]);
